@@ -1,10 +1,11 @@
-/* GERAL */
+/* GERAL --------------------------------------------------------------------------------------------------------------------------------*/
+
 :root{
-  --color-1: #343A40;
-  --color-2: #585858;
-  --color-3: #fffcf2;
-  --color-4: #EAF2EF;
-  --color-5: #3891A6;
+  --color-dark: #121217;
+  --color-sky: #030029;
+  --color-wood: #4C3505;
+  --color-title: #FDB021;
+  --color-p: #EBEBEB;
 }
 
 * {
@@ -15,33 +16,31 @@
 }
 
 body {
-  background-color: #585858;
-
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
 }
 
-.container {
-  display: flex;
-  justify-content: space-between;
-
-  width: 100%;
-
-  padding-inline: 16px;
-  padding-block: 20px;
+#agendar,
+#carrinho,
+#serviços,
+#contact {
+  font-size: 30px;
 }
 
-.box{
-  width: 800px;
+section{
+  padding: 60px;
+}
 
-  margin: 0 auto;
-
+section h1{
+  text-shadow: 7px 9px 1px #000;
+  font-size: 80px;
   text-align: center;
+  margin-bottom: 16px;
 }
 
-/* NAVEGAÇÃO */
+/* NAVEGAÇÃO ----------------------------------------------------------------------------------------------------------------------------*/
 
 .navbar {
-  background-color: #343a40;
+  background-color: var(--color-sky);
 }
 
 .navbar-name {
@@ -55,7 +54,7 @@ body {
 
 .navbar-name:hover {
   text-decoration: none;
-  color: var(--color-2);
+  color: var(--color-title);
 }
 
 .navbar-list {
@@ -85,17 +84,16 @@ body {
   text-decoration: underline;
 }
 
-#agendar,
-#carrinho,
-#serviços,
-#contact {
-  font-size: 30px;
-}
-
-/* CARROSSEL */
+/* CARROSSEL ----------------------------------------------------------------------------------------------------------------------------*/
 
 header{
-  margin-top: 16px;
+  background-color: var(--color-dark);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 180px;
 }
 
 .slider{
@@ -105,6 +103,7 @@ header{
 
   width: 800px;
   height: 400px;
+
 }
 
 .slides{
@@ -184,7 +183,7 @@ header{
 }
 
 .navigation-auto div{
-  border: 2px solid blue;
+  border: 2px solid white;
   border-radius: 10px;
 
   padding: 5px;
@@ -210,16 +209,238 @@ header{
   background-color: white;
 }
 
-/* FOOTER */
+/* HOME ---------------------------------------------------------------------------------------------------------------------------------*/
+
+#home{
+  background-color: var(--color-wood);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+
+  padding-inline: 16px;
+  padding-block: 20px;
+}
+
+.box {
+  width: 100%; 
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.image {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.image img {
+  max-width: 100%; 
+  max-height: 100%; 
+  object-fit: cover; 
+}
+
+.content {
+  flex: 1;
+
+  font-size: 23px;
+  text-align: justify;
+  color: var(--color-p);
+}
+
+.content h1{
+  color: var(--color-title);
+}
+
+.content p{
+  margin-bottom: 16px;
+}
+
+/* CORTES -------------------------------------------------------------------------------------------------------------------------------*/
+
+#cortes{
+  background-color: var(--color-sky);
+  color: var(--color-title);
+  text-align: center;
+}
+
+.cards{
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #000;
+  border: 1px solid var(--color-wood); 
+  border-radius: 8px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+
+  width: 400px; 
+
+  margin: 20px; 
+  padding-inline: 16px;
+
+  transition: .3s;
+}
+
+.card:hover{
+  box-shadow: 0px 0px 5px 2px var(--color-title);
+}
+
+.card-head {
+  text-align: center;
+}
+
+.title-card {
+  font-family: 'Times New Roman', Times, serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 30px; 
+
+  margin-block: 16px; 
+}
+
+.img-card {
+  border-radius: 50%;
+
+  width: 100%; 
+  height: auto; 
+  
+  margin-top: 10px; 
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.preco-card {
+  color: var(--color-title);
+  font-size: 20px; 
+  font-weight: bold; 
+  font-family: 'Times New Roman', Times, serif;
+
+  margin-bottom: 20px;
+  margin-top: 12px;
+}
+
+.btn-primary {
+  display: block;
+
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  
+  color: #000; 
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 16px;
+
+  width: 120px;
+
+  padding: 10px;
+  margin: 0 auto;
+
+  transition: .3s;
+}
+
+.btn-primary:hover {
+  background-color: #FDB021;
+}
+
+/* EXTRAS -------------------------------------------------------------------------------------------------------------------------------*/
+
+#extras{
+  background-color: var(--color-sky);
+}
+
+#extras h1{
+  color: var(--color-title);
+  text-align: center; 
+
+  margin-bottom: 32px; 
+}
+
+.letters{
+  display: flex;
+  justify-content: space-around;
+
+  margin: 0 auto;
+}
+
+.letter{
+  background-color: var(--color-wood);
+  border-radius: 16px;
+
+  text-align: center;
+
+  margin: 16px;
+}
+
+.letter-title {
+  color: var(--color-title); 
+  text-transform: uppercase;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 60px; 
+
+  margin-block: 16px; 
+}
+
+.letter-box{
+  background-color: #000;
+  border-radius: 16px;
+
+  color: var(--color-p);
+
+  margin: 10px;
+  padding: 20px;
+}
+
+.list-card {
+  columns: 2;
+
+  padding: 0;
+  margin: 0;
+
+  list-style: none; 
+}
+
+.letter-item {
+  position: relative; 
+
+  text-align: justify;
+
+  margin-bottom: 16px;
+  padding-left: 20px; 
+}
+
+
+.letter-item::before {
+  content: "\2022"; 
+  color: var(--color-title); 
+
+  position: absolute; 
+  left: 0; 
+  
+  margin-right: 8px; 
+}
+
+/* FOOTER -------------------------------------------------------------------------------------------------------------------------------*/
 
 footer {
-  position: absolute;
-  bottom: 0;
-
-  background-color: #343a40;
+  background-color: var(--color-sky);
   width: 100%;
   text-align: center;
-  color: white;
+  color: var(--color-p);
 }
 
 .footer-item{
@@ -227,7 +448,7 @@ footer {
 }
 
 .footer-link {
-  color: white;
+  color: var(--color-p);
   text-decoration: none;
 }
 
