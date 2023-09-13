@@ -3,7 +3,7 @@
 :root{
   --color-dark: #121217;
   --color-sky: #030029;
-  --color-wood: #4C3505;
+  --color-wood: #6E411A;
   --color-title: #FDB021;
   --color-p: #EBEBEB;
 }
@@ -15,6 +15,7 @@
   padding: 0;
 }
 
+
 body {
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
 }
@@ -22,7 +23,8 @@ body {
 #agendar,
 #carrinho,
 #serviços,
-#contact {
+#contact,
+#zap {
   font-size: 30px;
 }
 
@@ -31,6 +33,7 @@ section{
 }
 
 section h1{
+  color: var(--color-title);
   text-shadow: 7px 9px 1px #000;
   font-size: 80px;
   text-align: center;
@@ -40,7 +43,18 @@ section h1{
 /* NAVEGAÇÃO ----------------------------------------------------------------------------------------------------------------------------*/
 
 .navbar {
-  background-color: var(--color-sky);
+  background-color: var(--color-dark);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+
+  padding-inline: 16px;
+  padding-block: 12px;
 }
 
 .navbar-name {
@@ -87,7 +101,7 @@ section h1{
 /* CARROSSEL ----------------------------------------------------------------------------------------------------------------------------*/
 
 header{
-  background-color: var(--color-dark);
+  background-color: var(--color-sky);
 
   display: flex;
   justify-content: center;
@@ -215,42 +229,35 @@ header{
   background-color: var(--color-wood);
 }
 
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
+.box {
   width: 100%;
 
-  padding-inline: 16px;
-  padding-block: 20px;
-}
-
-.box {
-  width: 100%; 
-
   display: flex;
-  flex-direction: row;
   align-items: center;
+  flex-direction: row; 
 }
 
 .image {
   flex: 1;
-  margin-left: 20px;
+
+  display: flex; 
+  align-items: center; 
 }
 
 .image img {
-  max-width: 100%; 
-  max-height: 100%; 
-  object-fit: cover; 
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }
 
 .content {
   flex: 1;
 
+  color: var(--color-p);
   font-size: 23px;
   text-align: justify;
-  color: var(--color-p);
+
+  margin-inline: 24px; 
 }
 
 .content h1{
@@ -330,7 +337,7 @@ header{
   margin-top: 12px;
 }
 
-.btn-primary {
+.btn-card {
   display: block;
 
   background-color: #fff;
@@ -341,19 +348,19 @@ header{
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 16px;
 
   width: 120px;
 
   padding: 10px;
-  margin: 0 auto;
+  margin: 32px auto;
 
   transition: .3s;
 }
 
-.btn-primary:hover {
+.btn-card:hover {
   background-color: #FDB021;
 }
 
@@ -384,6 +391,8 @@ header{
   text-align: center;
 
   margin: 16px;
+
+  width: 500px;
 }
 
 .letter-title {
@@ -403,6 +412,8 @@ header{
 
   margin: 10px;
   padding: 20px;
+
+  height: 250px;
 }
 
 .list-card {
@@ -417,7 +428,7 @@ header{
 .letter-item {
   position: relative; 
 
-  text-align: justify;
+  text-align: start;
 
   margin-bottom: 16px;
   padding-left: 20px; 
@@ -434,10 +445,49 @@ header{
   margin-right: 8px; 
 }
 
+/* DOMICILIO ----------------------------------------------------------------------------------------------------------------------------*/
+
+#domicilio{
+  background-color: var(--color-wood);
+}
+
+.content .btn-page {
+  display: flex; 
+  align-items: center; 
+
+  background-color: #25d366; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+  border-radius: 8px; 
+
+  color: #fff; 
+  font-weight: bold; 
+  text-align: center;
+  text-decoration: none; 
+
+  width: 200px;
+
+  padding: 16px;
+  margin-top: 32px;
+}
+
+.content .btn-page:hover {
+  background-color: #128c7e; 
+}
+
+.content .btn-page ion-icon {
+  margin-right: 16px; 
+}
+
+/* LOCALIZAÇÃO --------------------------------------------------------------------------------------------------------------------------*/
+
+#localizacao{
+  background-color: var(--color-sky);
+}
+
 /* FOOTER -------------------------------------------------------------------------------------------------------------------------------*/
 
 footer {
-  background-color: var(--color-sky);
+  background-color: var(--color-dark);
   width: 100%;
   text-align: center;
   color: var(--color-p);
