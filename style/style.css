@@ -484,6 +484,30 @@ header{
   background-color: var(--color-sky);
 }
 
+/* POLÍTICA -----------------------------------------------------------------------------------------------------------------------------*/
+
+#politica{
+  background-color: var(--color-wood);
+}
+
+#politica a{
+  color: var(--color-title);
+}
+
+#politica h2{
+  color: var(--color-title);
+  font-size: 36px;
+
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+#politica ul li,
+#politica ol li{
+  margin-left: 26px;
+  padding: 10px;
+}
+
 /* FOOTER -------------------------------------------------------------------------------------------------------------------------------*/
 
 footer {
