@@ -1,10 +1,7 @@
 // SCRIPT CARROSSEL
+document.getElementById("radio1").checked = true;
 
 let count = 1;
-
-document.getElementById("radio1").checked = true;
-setInterval(function(){nextImage();}, 3000);
-
 function nextImage(){
   count++;
   if(count>3){
@@ -12,3 +9,12 @@ function nextImage(){
   }
   document.getElementById("radio"+count).checked = true;
 }
+setInterval(function(){nextImage();}, 3000);
+
+
+// SCRIPT SCROLL
+function verificarScroll() {
+  var scrollAtual = window.scrollY || window.pageYOffset;
+  //scrollAtual > 0 ? alert(scrollAtual) : '';
+}
+window.addEventListener('scroll', verificarScroll);

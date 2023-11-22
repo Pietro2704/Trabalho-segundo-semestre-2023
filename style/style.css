@@ -1,7 +1,7 @@
 /* GERAL --------------------------------------------------------------------------------------------------------------------------------*/
 
 :root{
-  --color-dark: #121217;
+  --color-dark: rgb(18, 18, 23);
   --color-sky: #030029;
   --color-wood: #6E411A;
   --color-title: #FDB021;
@@ -29,13 +29,13 @@ body {
 }
 
 section{
-  padding: 60px;
+  padding: 30px;
 }
 
 section h1{
   color: var(--color-title);
   text-shadow: 7px 9px 1px #000;
-  font-size: 80px;
+  font-size: 60px;
   text-align: center;
   margin-bottom: 16px;
 }
@@ -107,7 +107,7 @@ header{
   justify-content: center;
   align-items: center;
 
-  padding: 180px;
+  padding: 100px;
 }
 
 .slider{
@@ -254,7 +254,7 @@ header{
   flex: 1;
 
   color: var(--color-p);
-  font-size: 23px;
+  font-size: 20px;
   text-align: justify;
 
   margin-inline: 24px; 
@@ -366,84 +366,79 @@ header{
 
 /* EXTRAS -------------------------------------------------------------------------------------------------------------------------------*/
 
-#extras{
+#extras {
   background-color: var(--color-sky);
 }
 
-#extras h1{
+#extras h1 {
   color: var(--color-title);
-  text-align: center; 
-
-  margin-bottom: 32px; 
+  text-align: center;
+  margin-bottom: 16px; 
 }
 
-.letters{
+.letters {
   display: flex;
+  flex-wrap: wrap; 
   justify-content: space-around;
-
   margin: 0 auto;
 }
 
-.letter{
+.letter {
   background-color: var(--color-wood);
   border-radius: 16px;
-
   text-align: center;
-
-  margin: 16px;
-
-  width: 500px;
+  margin: 8px; 
+  width: calc(33.3% - 16px); 
 }
 
 .letter-title {
-  color: var(--color-title); 
+  color: var(--color-title);
   text-transform: uppercase;
   font-family: 'Times New Roman', Times, serif;
-  font-size: 60px; 
-
-  margin-block: 16px; 
+  font-size: 24px; 
+  margin-block: 8px; 
 }
 
-.letter-box{
+.letter-box {
   background-color: #000;
   border-radius: 16px;
-
   color: var(--color-p);
-
   margin: 10px;
-  padding: 20px;
-
-  height: 250px;
+  padding: 16px; 
+  height: auto; 
 }
 
 .list-card {
-  columns: 2;
-
   padding: 0;
   margin: 0;
-
-  list-style: none; 
+  list-style: none;
 }
 
 .letter-item {
-  position: relative; 
-
+  position: relative;
   text-align: start;
+  margin-bottom: 8px;
+  padding-left: 24px; 
 
-  margin-bottom: 16px;
-  padding-left: 20px; 
 }
-
 
 .letter-item::before {
-  content: "\2022"; 
-  color: var(--color-title); 
-
-  position: absolute; 
-  left: 0; 
-  
-  margin-right: 8px; 
+  content: "\2022";
+  color: var(--color-title);
+  position: absolute;
+  left: 0;
+  margin-right: 4px; 
 }
+
+@media (max-width: 768px) {
+  .letters {
+    flex-direction: column; 
+  }
+  .letter{
+    width: calc(100% - 16px); 
+  }
+}
+
 
 /* DOMICILIO ----------------------------------------------------------------------------------------------------------------------------*/
 
@@ -483,6 +478,52 @@ header{
 #localizacao{
   background-color: var(--color-sky);
 }
+
+/* AGENDAMENTO --------------------------------------------------------------------------------------------------------------------------*/
+
+#agendamento{
+  background-color: var(--color-sky);
+
+}
+
+#agendamento form {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#agendamento .campo {
+  margin-bottom: 20px;
+}
+
+#agendamento legend {
+  font-weight: bold;
+}
+
+#agendamento label {
+  margin-left: 5px;
+}
+
+#agendamento #agendamento input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+#agendamento input[type="submit"] {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#agendamento input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
 
 /* POLÍTICA -----------------------------------------------------------------------------------------------------------------------------*/
 
