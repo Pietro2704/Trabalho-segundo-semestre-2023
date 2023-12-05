@@ -24,7 +24,8 @@ body {
 #carrinho,
 #serviços,
 #contact,
-#zap {
+#zap,
+#voltar {
   font-size: 30px;
 }
 
@@ -481,9 +482,8 @@ header{
 
 /* AGENDAMENTO --------------------------------------------------------------------------------------------------------------------------*/
 
-#agendamento{
+#agendamento {
   background-color: var(--color-sky);
-
 }
 
 #agendamento form {
@@ -493,6 +493,10 @@ header{
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#agendamento h1 {
+  text-align: center;
 }
 
 #agendamento .campo {
@@ -505,10 +509,18 @@ header{
 
 #agendamento label {
   margin-left: 5px;
+  display: block; 
 }
 
-#agendamento #agendamento input[type="checkbox"] {
-  margin-right: 5px;
+#agendamento input[type="text"],
+#agendamento input[type="tel"],
+#agendamento input[type="datetime-local"],
+#agendamento input[type="checkbox"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
 }
 
 #agendamento input[type="submit"] {
@@ -518,10 +530,17 @@ header{
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  display: block;
+  margin-top: 10px;
 }
 
 #agendamento input[type="submit"]:hover {
   background-color: #45a049;
+}
+
+#agendamento .btn {
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
 
